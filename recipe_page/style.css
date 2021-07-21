@@ -1,0 +1,72 @@
+.recipe-pamphlet {
+  display: block;
+  border: solid 3px rgb(85,107,47);
+  border-radius: .4em;  
+  font-family: 'Playfair Display', serif;
+  background-color: #f5f5dc;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F1ECC3;
+  border:  solid 0.25px rgb(85,107,47);
+}
+.navlinks {
+  float: left;
+}
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+h1 {
+  font-size: 2em;
+  text-decoration-line: underline; 
+}
+.introduction{
+  font-size: 1em;
+}
+p, li {
+  font-weight:  500;
+}
+h1, .photo-credit, img{
+  text-align: center;
+}
+h1, h2 {
+  color: #3A6351;
+}
+.photo-credit {
+  font-size: 0.25em;
+}
+.introduction, .top, .left, .right{
+  padding: 15px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+a {
+   color: #000;
+}
+a:hover {
+  background-color:rgb(216,228,188);
+  text-decoration: none;
+  padding: 5px;
+}
+.button1, .button2, .button3 {
+  font-family: 'Playfair Display', serif;
+  border-radius: .4em;
+  padding: 10px;
+  font-size: x-small;
+  background-color: #f5f5dc;
+}
+footer{
+  text-align: center;
+  font-size:0.75em;
+}
