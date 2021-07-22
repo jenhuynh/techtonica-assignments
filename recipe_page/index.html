@@ -2,21 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <!-- viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tofu Banh Mi Recipe</title>
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  <div class="container">
   <article class = "recipe-pamphlet">
   <body>
     <nav>
-      <ul class = "navbar">
-        <li class = "navlinks"><a href="#home">Home</a></li>
-        <li class = "navlinks"><a href="#ingredients">Ingredients</a></li>
-        <li class = "navlinks"><a href="#instructions">Instructions</a></li>
-        <li class = "navlinks"><a href="#more-recipes">More Recipes</a></li>
+      <ul class = "navbar" id="navChangeColor" >
+        <li class = "navlinks"><a class="navColor" href="#home">Home</a></li>
+        <li class = "navlinks"><a class="navColor" href="#ingredients">Ingredients</a></li>
+        <li class = "navlinks"><a class="navColor" href="#instructions">Instructions</a></li>
+        <li class = "navlinks"><a class="navColor" href="#more-recipes">More Recipes</a></li>
         </ul>
     </nav>
     <div class = "top" id = "home">
@@ -24,12 +26,12 @@
            <div>
           <img class="photo-credit" src = "https://www.swmayonnaise.com.au/wp-content/uploads/recipe_chicken_banh_mi_sliders_banner.png" alt="Banh Mi Tofu image">
           <p class="photo-credit">Photo credit: <a href = "https://www.swmayonnaise.com.au/chicken-banh-mi-sliders/" target="_blank">SW Mayonnaise</a></p>
-          <h1>Tofu Banh Mi Sandwich Recipe</h1>
-            <p class="introduction">Banh Mi sandwiches are an all time favorite dish in my family. It is easy to make, package, and bring with you on the go. The beauty of these banh mi sandwiches are that you can put anything in them from meat to veggies. Here's a vegetarian take on them that makes four servings! This recipe detailed down below was shared from <a href="https://www.loveandlemons.com/banh-mi/">Love and Lemons</a>.</p> 
+          <h1 id="header1">Tofu Banh Mi Sandwich Recipe</h1>
+            <p class="introduction">Banh Mi sandwiches are an all time favorite dish in my family. It is easy to make, package, and bring with you on the go. The beauty of these banh mi sandwiches are that you can put anything in them from meat to veggies. Here's a vegetarian take on them that makes four servings! This recipe detailed down below was shared from <a href="https://www.loveandlemons.com/banh-mi/" target="_blank">Love and Lemons</a>.</p> 
     </div>
     <div class = "left" id = "ingredients">
     <div>
-        <h2>Ingredients</h2>
+        <h2 class= "header2" >Ingredients</h2>
           <hr>
             <ul>
               <li>1 (14-ounce) package extra firm tofu </li>
@@ -63,7 +65,7 @@
   </div>
   <div class = "right" id="instructions">
     <div>
-      <h2>Instructions</h2>
+      <h2 class= "header2">Instructions</h2>
         <hr>
           <h4>Make ahead of time</h4>
               <ol>
@@ -84,7 +86,7 @@
             </ol>
     </div>
   <div id="more-recipes">
-    <h2>Other Banh Mi Recipes</h2>
+    <h2 class="header2">Other Banh Mi Recipes</h2>
      <hr>
       <p> 
           <button type = "button1" class="button1"> 
@@ -98,8 +100,9 @@
         </p>
      </div>
   </div>
+</div>
    <footer>
-    <p>Created by <a href="https://github.com/jenhuynh" target="_blank">Jen Huynh</a>
+    Created by <a href="https://github.com/jenhuynh" target="_blank">Jen Huynh</a>
   </footer>
   </article>
     <script src="script.js"></script>
