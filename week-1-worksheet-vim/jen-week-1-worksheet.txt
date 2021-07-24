@@ -1,0 +1,66 @@
+How do you plan on exhibiting professionalism at Techtonica? What would be different in a full-time engineering job setting?
+I plan to show up on time, make sure projects and deadlines are met, and be respectful to my classmates. In a full-time engineering job, I would do the same but hopefully I will be able to do these in person rather than virtually.
+
+
+What would you do if you just found out you are going to be an hour late tomorrow morning?
+If I found out I was going to be late tomorrow morning, I would message my SEAM and technical manager to let them know I will be running late the day before with a message on Slack or email.
+
+
+What would you do if you realized that you only had time to finish most of your work by the due date of a group project?
+If I realized I only had time to finish most of my work by the dude date of a group project, I would let them know ahead of time and see if there is anything else I can help with.
+
+
+Knowing yourself, what are the most effective ways for you to learn and retain new information?
+The most effective way for me to learn is visually and auditorily. 
+
+
+What is growth mindset?
+Growth mindset is believing that through effort and learning you can achieve your goals and come to understand hard concepts. 
+
+
+Which operating system are you using right now? Name two other popular operating systems.
+I am using MacOS as my operating system. Other popular operating systems are Microsoft Windows and Linus.
+
+
+Why do computers need operating systems?
+Computers need operating systems in order to help manage all the hardware and software which controls processes such as files, sections of memory, and device management.
+
+
+Explain what you would do if you felt stuck on a coding problem.
+If I felt stuck on a coding problem, I would try to debug by going step by step through the solution, reassess by taking a step back, and research online to try to solve the problem.
+
+
+Describe the ways you plan on meeting and staying connected with new people in tech this month.
+I plan to meet new people in tech this month by attending virtual events and meetups. I plan to stay connected with new people through LinkedIn, Twitter, following blogs or through email.
+
+
+Describe some examples of effective body language and what is communicated when they are used well.
+Some examples of effective body language facing the person, making eye contact, and somewhat mirror what they are doing. These forms of body language show that you are engaged and paying attention to what they are doing and saying. 
+
+
+Describe some examples of effective word choice and what is communicated when they are used well.
+Some examples of effective word choices are making sure you are using we in situations of pair programming and using proper grammar their/there/they’re. When using effective word choice, you are able to keep others engaged and understand what you are trying to convey.
+
+
+How can you build trust in a team?
+Some ways you can build trust in a team is transparency, respect, showing you care, building morale, and encouraging each other. 
+
+
+How are the devices on the internet physically connected to each other?
+Devices on the internet are physically connected to each other by cables are radio waves if it is wireless. Computers that make up the internet are set up in large networks that communicate with each other via underground (or under water), wires and are identified using strings of numbers known as IP addresses.
+
+
+How is information physically transmitted from device to device?
+Information can physically be transmitted from device to device through the internet protocol layer and ip directs packets to a specific computer using an IP address.
+
+
+How does one device find another it’s trying to communicate with?
+A device finds another it’s trying to communicate with by your computer. It connects to a network and the network can identify it from its IP address. Within the network your computer can communicate with other computers that are interconnected with an Ethernet or a switch to the same network.
+
+
+What methods do devices on the internet use to communicate?
+Some of the methods that devices on the internet use to communicate are protocols for sending packets between devices on the same network (Ethernet), for sending packets from network to network (IP), for ensuring those packets successfully arrive in order (TCP), and for formatting data for websites and applications (HTTP). 
+
+
+How can we send data reliably even if the network is unreliable?
+We can send data reliably even if the network is unreliable through the Transmission Control Protocol (TCP) guarantees reliable transmission by breaking messages into packets, keeping track of which packets have been received successfully, resending any that have been lost, and specifying the order for reassembling the data on the other end. 
