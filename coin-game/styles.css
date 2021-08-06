@@ -1,0 +1,72 @@
+body {
+    background-color: #002366;
+}
+h1, p {
+    text-align: center;
+    color: #FFDAB9;
+}
+h1 {
+    font-size: 3.5em;
+}
+p{
+    font-size: 1.5em;
+}
+.game-container{
+    border: 4px solid #FFDAB9;
+    border-radius: 15px;
+    box-sizing: border-box;
+    height: 600px;
+    color: white;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    background-color: #FA8072;
+}
+.button-container{
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 5px solid #FFDAB9;
+    height: 150px;
+    width: 50%;
+    color: white;
+    text-align: center;
+    margin: auto;
+    background-color: #FA8072;
+}
+label.coinlabel {
+    margin: auto;
+    font-size: 1.5em;      
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+img{
+    width: 30%;
+    height: auto;
+    margin: 70px;
+}
+input{
+    margin: 10px;
+    font-size: 1em;
+    height: auto;
+    /* bottom: 0px;   */
+}
+input #timesFlipped{
+   margin: 15px;
+    /* height: auto; */
+}
+button{
+    border-radius: 15px;
+    font-size: 0.5em;
+    padding: 10px;
+    background-color: #FFDAB9;
+}
+button#flip{
+    margin: 20px;
+    font-size: 1em;
+}
+div#flipped{
+    column-count:10;
+}
