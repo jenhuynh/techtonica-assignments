@@ -7,7 +7,7 @@ let flipped = document.getElementById("flipped");
 
 function coinFlip(event) {
 
-    //gets the value to input elmeent 
+    //gets the value to input element
     let timesFlipped = document.getElementById("timesFlipped").value;
     //result is stored in the amount variable
     let amount = "";
