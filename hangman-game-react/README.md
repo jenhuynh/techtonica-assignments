@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Can you H_ang? - Hang Man Game
+
+Rules of the Game
+1. Guess the word
+2. Try your best to guess within 60 seconds.
+3. If you select a wrong letter, the leter will be posted under the "Wrong" list
+4. If you select the same word twice, a popup will alert you that you have selected the same word already.
+5. If you cannot guess the write word after 6 tries, you lose. 
+6. When you lose, you will see a popup notifying you lost and tell you what the correct word was. 
+
+Feel free to play again!
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
