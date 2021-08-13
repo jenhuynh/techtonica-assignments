@@ -15,7 +15,10 @@ const words = ['animal', 'code', 'animate', 'flavor'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
  
 function App() {
-  //useState to keep track and see if the game is playable, initially set to true
+  //useState to create countdown timer
+  const [counter, setCounter] = React.useState(60);
+
+  //useState to keep track and see if the game is to be playable/played again, initially set to true
   const [playable, setPlayable] = useState(true);
 //useState to keep track of correct letters, initially set to empty array
   const [correctLetters, setCorrectLetters] = useState([]);
@@ -23,6 +26,15 @@ function App() {
   const [wrongLetters, setWrongLetters] = useState([]);
 //useState to showNotification when same letter is tried twice, initially set to false
   const [showNotification, setShowNotification] = useState(false);
+
+  //add counter in useEffect hook so that every time when the counter changes, new setInterval() is called.
+  React.useEffect(() => {
+     //use callback function in useEffect hook to clear the interval in current scope so that only one setInterval() instance is running in the global environment at the same time.
+    const timer =
+      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+     
+    return () => clearInterval(timer);
+  }, [counter]);
 
   //useEffect meant to be a side effect of the app
 useEffect(() => {
@@ -79,6 +91,7 @@ function playAgain() {
       <Header />
       <div className="game-container">
         <Figure wrongLetters={wrongLetters} />
+        <div>Countdown: {counter}</div>
         <WrongLetters wrongLetters={wrongLetters} />
         {/* passing selectedWord and correctedLetters props in word component*/}
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
