@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import React, { useState, useEffect} from 'react';
 import Header from './components/Header'
 import Figure from './components/Figure'
