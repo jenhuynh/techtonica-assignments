@@ -63,7 +63,16 @@ useEffect(() => {
     //in this array, anytime correctletters, wrongletters, or playable get rendered, that's when the function if(!wrongletters.includes) is called
 }, [correctLetters, wrongLetters, playable]);
 
+function playAgain() {
+  setPlayable(true);
 
+  //reset arrays of correct letters and wrong letters to empty array
+  setCorrectLetters([]);
+  setWrongLetters([]);
+
+  const random = Math.floor(Math.random() * words.length);
+  selectedWord = words[random];
+}
 
   return (
     <>
@@ -74,7 +83,7 @@ useEffect(() => {
         {/* passing selectedWord and correctedLetters props in word component*/}
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup />
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain}/>
       <Notification showNotification={showNotification}/>
     </> 
   )
