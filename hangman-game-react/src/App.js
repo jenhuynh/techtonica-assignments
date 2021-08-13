@@ -16,7 +16,7 @@ let selectedWord = words[Math.floor(Math.random() * words.length)];
  
 function App() {
   //useState to create countdown timer
-  const [counter, setCounter] = React.useState(60);
+  const [counter, setCounter] = React.useState(120);
 
   //useState to keep track and see if the game is to be playable/played again, initially set to true
   const [playable, setPlayable] = useState(true);
