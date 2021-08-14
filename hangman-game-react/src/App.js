@@ -5,7 +5,7 @@ import WrongLetters from './components/WrongLetters';
 import Word from './components/Word';
 import Notification from './components/Notification';
 import Popup from './components/Popup';
-//because we can't have the same name as state when we import, we use as keyword to rename showNotication to the show 
+//because we can't have the same name as state when we import, we use as keyword to renamed showNotification to show 
 import { showNotification as show } from './helpers/helpers';
 import './App.css';
 
