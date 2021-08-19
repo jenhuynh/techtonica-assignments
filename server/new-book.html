@@ -1,0 +1,42 @@
+<!-- creating HTML form with fields -->
+<div class="container">
+    <hr>
+    <h1>Create New Book</h1>
+    <hr>
+<!-- form tag's attribute corresponds to our endpoint -->
+<!-- method parameter is POST is just like our API -->
+    <form action="http://localhost:3000/book" method="POST">
+        <!-- isbn form field -->
+        <div class="form-group">
+            <label for="ISBN">ISBN</label>
+            <input class="form-control" name="isbn">
+        </div>
+         <!-- title form field -->
+        <div class="form-group">
+            <label for="Title">Title</label>
+            <input class="form-control" name="title">
+        </div>
+        <!-- author form field -->
+        <div class="form-group">
+            <label for="Author">Author</label>
+            <input class="form-control" name="author">
+        </div>
+         <!-- published date form field -->
+         <div class="form-group">
+            <label for="publish_date">Published Date</label>
+            <input class="form-control" name="publish_date">
+        </div>
+         <!-- publisher form field -->
+         <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input class="form-control" name="publisher">
+        </div>
+         <!-- numOfPages form field -->
+         <div class="form-group">
+            <label for="numOfPages">Number of Pages</label>
+            <input class="form-control" name="numOfPages">
+        </div>
+        <!-- information we sent with the submit button is the information our method parses and adds to the array -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
