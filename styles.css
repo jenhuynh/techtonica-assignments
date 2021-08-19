@@ -1,0 +1,105 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin:0;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    color: white;
+    line-height: 1.4;
+}
+/* navbar css */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .navbar li {
+    float: right;
+    display: inline;
+  }
+  li a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+#landingPage {
+    background-image:url('./img/blue_background.jpg');
+    background-color: cornflowerblue;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+     /* use of flexbox */
+     display: flex;
+     flex-direction: column;
+     /* moves text to center */
+     justify-content: center;
+     /* align items to center */
+     align-items: center;
+     text-align: center;
+     padding: 0 20px;
+}
+#landingPage h1 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+
+#landingPage p{
+    font-size: 2em;
+}
+
+#landingPage .button{
+    font-size: 18px;
+    text-decoration: none;
+    color: coral;
+    border: white 2px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+#landingPage .button:hover{
+    background: coral;
+    color: white;
+    font-size: 1em;
+}
+#about h2, .headshot {
+    text-align: center;
+}
+.headshot{
+    width: 30vh;
+    height: 30vh;
+    float: left;
+    margin: 10px;
+}
+
+#about {
+    height: 100%;
+    padding: 20px;
+    color: black;
+}
+
+#about p, h3{
+    margin: 10px;
+}
+
+#contact {
+    background-image:url('./img/blue_background.jpg');
+    width: auto;
+    column-count: 2;
+    height: 100%;
+}
+
+#contact a{
+    color: white;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
