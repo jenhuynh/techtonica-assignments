@@ -65,7 +65,7 @@ app.post('/book', (req, res) => {
 
    //outbook the book to the console for debugging
    console.log(book);
-   book.push(book);
+   books.push(book);
 
    res.send('Book is added to the database')
 });
