@@ -1,0 +1,24 @@
+{
+  "name": "techtonica-assignments",
+  "version": "1.0.0",
+  "description": "Assignments for Techtonica",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenhuynh/techtonica-assignments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenhuynh/techtonica-assignments/issues"
+  },
+  "homepage": "https://github.com/jenhuynh/techtonica-assignments#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
