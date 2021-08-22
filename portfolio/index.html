@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jen Huynh Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header id="landingPage">
+         <h1>Hi, I'm Jen.</h1>
+         <p class="headline">Former teacher turned Software Engineer</p>
+         <a href="#about" class="button">Read More</a>
+     </header>
+    <section id="about">
+        <nav>
+            <ul class = "navbar" id="navChangeColor" >
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+              </ul>
+          </nav>
+        <h2>About Jen</h2>
+        <img class="headshot" src="img/Jen_Huynh_Headshot.jpg" alt="image of Jen Huynh">
+            <p>I’m a San Francisco native and the middle child of a family of five who graduated from San José State University with a B.A. in Child and Adolescent Development. As a preschool teacher, I learned to juggle teaching in the classroom, potty training students, and working with families and children. During the pandemic, I used my web development skills to help update and maintain the school’s website to keep parents and students informed with daily changes. This led me to discover my desire to learn more about code again. I am passionate about design and coding and am excited to continue learning.</p>
+        <h3>How I want to contribute and change in the tech industry</h3>
+            <p>There are two main ways I want to contribute to the tech industry: education and mentorship. I want to bring more knowledge and diversity into the tech industry by teaching and mentoring elementary and middle school-age students of low-income backgrounds in coding languages such as JavaScript.</p>
+            <p>I also want to create change in the tech industry by making technology accessible and easy for people of color of all ages and genders to use in their daily lives. I strive to be more receptive and conscious of how technology apps or programs can be more economically accessible and friendly to others with limited storage, internet, or technology resources.</p>
+            <p>I believe if we all bring in more diversity and people of all economic backgrounds, the income disparity gap will get slimmer.</p>
+                </p>
+    </section>
+    <div id="contact">
+        <div class="row">
+            <div class="column">
+            <h2>Connect with Jen</h2>
+                <p>Connect with me on GitHub:<a href="https://github.com/jenhuynh" target="_blank"> @jenhuynh</a></p>
+                <p>Connect with me on Twitter:<a href="https://twitter.com/JenHuynh19" target="_blank"> @jenhuynh19</a></p>
+            </div>
+            <section>
+            <div class="column">
+                    <form id="form">
+                    <p>Get in Contact with Jen!</p>
+                    <!-- first name text form-->
+                    <p><label for="firstName">First Name:</label>
+                        <input type="text" id="new_first_name" class="firstName"  placeholder="Enter first name" name="firstname"required></p>
+                    <button class="firstNameButton" type= "button" value="firstName">Submit First Name</button>
+                    
+                    <!-- last name text form -->
+                    <p><label for="lastName">Last Name:</label>
+                        <input type="text" id="new_last_name" class="lastName" placeholder="Enter last name" name="lastname" required></p>
+                    <button class="lastNameButton" type="button" value="lastName">Submit Last Name</button>
+                    
+                    <!-- email form -->
+                    <p><label for="email">Email:</label> 
+                        <input id ="new_email" class="email" type="text" placeholder="Enter Email" name="email" required></p>
+                    <button class="emailButton" type= "button" value="email">Submit Email</button>
+                    
+                        <input type="submit" value="Submit">
+                    </form>
+                    <script src="script.js"></script>
+                </div>
+             </div>
+        </div>
+    </section>
+</body>
+</html>
