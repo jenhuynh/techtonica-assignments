@@ -1,8 +1,7 @@
 //Todo.js
 import React from 'react';
-// import { useState } from 'react';
 
-function Todo ({todo, sort, updateTodo}) {
+function Todo ({todo,updateTodo}) {
    function toggleCompletion(todo) {
         todo.isCompleted = !todo.isCompleted;
         console.log('todo =>', todo);
@@ -13,9 +12,10 @@ function Todo ({todo, sort, updateTodo}) {
         // checked={todo.isCompleted}
         onChange={toggleCompletion(todo)}
         checked= {todo.updateTodo}
+        sort ={todo.setSort}
         ></input>
-        {todo.text}        
-        {todo.sort}
+        {todo.text}  
+         
         </div>
     )
 }
