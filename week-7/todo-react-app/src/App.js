@@ -3,19 +3,6 @@ import Todo from './components/Todo';
 import { useState } from 'react';
 import './App.css';
 
-//So far the state looks correct, and you should see the button text update when it's pressed
-// 1:43
-// But you are not actually using sort anywhere else. The missing piece is actually sorting the list of todos before displaying it.
-// 1:44
-// So instead of todos.map it will be todos.somethingelse().map
-// 1:44
-// Check MDN and see if there is a method in arrays that you can use for sorting.
-// 1:45
-// Or maybe the tutorial you are following has a suggestion for that!
-// 1:46
-// (Because .sort doesn't return a sorted array, it sorts it in place :( )
-
-
 function App() {
   const [todos, settodos] = 
      useState ([{text: 'Walk dog', isCompleted: false, createdAt: new Date()}, {text: 'Feed cat', isCompleted: false, createdAt: new Date()}])
