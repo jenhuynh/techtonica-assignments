@@ -1,23 +1,24 @@
 //Todo.js
-import React from 'react';
+import React from "react";
 
-function Todo ({todo,updateTodo}) {
-   function toggleCompletion(todo) {
-        todo.isCompleted = !todo.isCompleted;
-        console.log('todo =>', todo);
-   }
-    return(
-        <div>
-        <input type="checkbox" 
-        // checked={todo.isCompleted}
-        onChange={toggleCompletion(todo)}
-        checked= {todo.updateTodo}
-        sort ={todo.setSort}
-        ></input>
-        {todo.text}  
-         
-        </div>
-    )
+//creating Todo component
+function Todo({ todo, updateTodo }) {
+  //destructing todo to keys of text, isCompleted
+  const { text, isCompleted } = todo;
+  function toggleCompletion() {
+    //find this todo and apply the changes in the second argument
+    updateTodo(todo, { isCompleted: !isCompleted, text: text.toUpperCase() });
+  }
+  return (
+    <div>
+      <input
+        type="checkbox"
+        checked={isCompleted}
+        onChange={toggleCompletion}
+      ></input>
+      {text}
+    </div>
+  );
 }
 
-export default Todo
+export default Todo;
