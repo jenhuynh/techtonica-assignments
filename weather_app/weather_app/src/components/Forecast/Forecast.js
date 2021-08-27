@@ -33,7 +33,7 @@ const Forecast = () => {
     // fetching weather app data, url is a template string so we can use our variables with useState and able to access global weather data
     // api for search one city `https://community-open-weather-map.p.rapidapi.com/weather?units=${unit}&q=${uriEncodedCity}`
     fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&cnt=25&appid=2a0d2423a6b833f34886eef2eb9b0175`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&cnt=33&appid=2a0d2423a6b833f34886eef2eb9b0175`
     )
       //converting the response into a JSON object, .then function is what happens after we get our data from the API, first waiting for response to see if it is 200
       .then((response) => {
@@ -91,8 +91,16 @@ const Forecast = () => {
           <button type="submit">Get Forecast</button>
         </div>
       </form>
-
-      {[0, 9, 14, 19, 24].map((index) => (
+      {/* {[0, 1, 2, 3, 4].map((index) => (
+        <WeatherCard
+          className="weatherCard"
+          responseObj={responseObj}
+          error={error}
+          loading={loading}
+          index={index}
+        />
+      ))} */}
+      {[0, 8, 16, 24, 32].map((index) => (
         <WeatherCard
           className="weatherCard"
           responseObj={responseObj}
@@ -101,9 +109,15 @@ const Forecast = () => {
           index={index}
         />
       ))}
-      {/* {[0, 1, 2, 3, 4].map((index) => {
+      {/* {[0, 9, 14, 19, 24].map((index) => {
         let dayInfo = responseObj.list[index];
-        return <WeatherCard temp={dayInfo.dt} />;
+        return (
+          <WeatherCard
+            date={dayInfo.dt_txt}
+            temp={Math.round(dayInfo.main.temp)}
+            description={dayInfo.weather.description}
+          />
+        );
       })} */}
     </div>
   );
