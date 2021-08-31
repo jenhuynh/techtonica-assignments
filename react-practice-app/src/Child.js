@@ -1,34 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Child({ childToParent, handleSubmit }) {
-  const data = "This is data from Child Component to the Parent Component.";
-  const submit = (event) => {
-    console.log(`
-      First Name: ${firstName}
-      Email: ${email}
-      Password: ${password}
-      `);
-    event.preventDefault();
-  };
+//passing props in child
+export default function Child(props) {
   return (
-    <>
-      <form onSubmit={submit}>
-        <h1>Create Account</h1>
-
-        <label>
-          Email:
-          <input
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <button primary onClick={() => childToParent(data)}>
-          Click Child
-        </button>
-      </form>
-    </>
+    <div className="child">
+      <h1>Child</h1>
+      {/* adding function onclick of the button to change word of parent component, calling function to change the word when user clicks on button  */}
+      {/* <button onClick={() => props.changeWord("Ball")}>
+        Click to change title
+      </button> */}
+      {/* <button onClick={() => setCount(1)}>1</button> */}
+    </div>
   );
 }
