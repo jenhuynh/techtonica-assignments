@@ -1,6 +1,7 @@
 //React does not import images the same way as HTML because Babel converts the code into regular HTML and CSS for the browser to use, the path ends up being different
 import calendarImg from "./calendar.png";
 import "./App.css";
+import Footer from "./components/footer.jsx";
 
 //what is repeated that can be turned to reusable components: forms with input type as text, ul with list elements, submit button, fieldset  with label and input
 function App() {
@@ -100,19 +101,7 @@ function App() {
           </div>
         </aside>
       </main>
-
-      <footer>
-        <div>
-          Star Calendar favicon made by
-          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-            Freepik
-          </a>
-          Find your own on
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            FlatIcon.com
-          </a>
-        </div>
-      </footer>
+      <footer>{Footer}</footer>
     </div>
   );
 }
