@@ -17,6 +17,14 @@ const Users = () => {
 
     //use settate to user id field
     const [id, setId] = useState("");
+
+    //add onSubmit function
+    const onSubmit = (event) => {
+        event.preventDefault(); // Prevent default submission so that it stops it from refreshing and sending data
+            const newUser = { name, email, id };
+            setUsers([...users, newUser, id]);
+    };
+  
   return (
    <>
      <section className="user-management">
@@ -24,13 +32,13 @@ const Users = () => {
 
               <ul id="users-list">
                 {/* display all existing Users here, iterating through users with map,  transforming each user into a <li></li> and add u as the key */}
-                {users.map((user) => <li>User:   {user.name}, Email: {user.email}</li>)}
+                {users.map((user, id) => <li key={id}>User:   {user.name}, Email: {user.email}</li>)}
                 
               </ul>
 
               <div>
                 <h3>Add User</h3>
-                <form id="add-user" action="#">
+                <form id="add-user" action="#" onSubmit={onSubmit}>
                   <fieldset>
                       {/* user name field */}
                   <div>
@@ -50,9 +58,8 @@ const Users = () => {
                     <input type="text" id="add-user-id"
                     value={id} onChange={(e) => setId(e.target.value)}/>
                     </div>
-                    
                   </fieldset>
-                
+                 
                   <input type="submit" value="Add" />
                 </form>
               </div>
