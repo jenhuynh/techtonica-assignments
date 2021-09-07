@@ -59,8 +59,9 @@ const Users = () => {
                     value={id} onChange={(e) => setId(e.target.value)}/>
                     </div>
                   </fieldset>
-                 
-                  <input type="submit" value="Add" />
+                  <input type="submit" value="Add" id="addUser"/>
+                  {/* reset button not working
+                  <button onClick="document.getElementById('addUser').value='Add'">Reset</button> */}
                 </form>
               </div>
 
