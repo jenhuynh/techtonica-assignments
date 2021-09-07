@@ -16,7 +16,7 @@ function App() {
 
         <main>
           <div className="user-and-events"></div>
-          <section>{Users}</section>
+          <Users />
           <div>
             <h3>Delete Event</h3>
             <form id="delete-event" action="#">
