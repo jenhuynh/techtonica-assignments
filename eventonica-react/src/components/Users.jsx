@@ -6,9 +6,17 @@ const Users = () => {
     const nemo = { name: "Nemo", email: "nemo@gmail.com", id: "2" };
     const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
 
-
     //use setState to create uers and setUsers
     const [users, setUsers] = useState([marlin, nemo, dory])
+
+    //use setstate to name field
+    const [name, setName] = useState("");
+
+    //use setstate to email field
+    const [email, setEmail] = useState("");
+
+    //use settate to user id field
+    const [id, setId] = useState("");
   return (
    <>
      <section className="user-management">
@@ -24,10 +32,27 @@ const Users = () => {
                 <h3>Add User</h3>
                 <form id="add-user" action="#">
                   <fieldset>
+                      {/* user name field */}
+                  <div>
                     <label>Name</label>
-                    <input type="text" id="add-user-name" />
+                    {/* with value property, every time the user ty[es a name in name field, the name state is updated */}
+                    <input type="text" id="add-user-name"
+                    value={name} 
+                    onChange={(e) => setName(e.target.value)}/>
+                    </div>
+                    {/* email field */}
+                    <div><label>Email</label>
+                    <input type="email" id="add-user-email"
+                    value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    </div>
+                    {/* id field */}
+                    <div><label>User ID</label>
+                    <input type="text" id="add-user-id"
+                    value={id} onChange={(e) => setId(e.target.value)}/>
+                    </div>
+                    
                   </fieldset>
-                  {/* Add more form fields here */}
+                
                   <input type="submit" value="Add" />
                 </form>
               </div>
