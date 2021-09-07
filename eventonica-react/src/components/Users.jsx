@@ -1,17 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Users = () => {
+    //adding mock users 
     const marlin = { name: "Marlin", email: "marlin@gmail.com", id:"1" };
-const nemo = { name: "Nemo", email: "nemo@gmail.com", id: "2" };
-const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
+    const nemo = { name: "Nemo", email: "nemo@gmail.com", id: "2" };
+    const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
+
+
+    //use setState to create uers and setUsers
+    const [users, setUsers] = useState([marlin, nemo, dory])
   return (
    <>
      <section className="user-management">
               <h2>User Management</h2>
 
               <ul id="users-list">
-                {/* display all existing Users here */}
-                <li>...</li>
+                {/* display all existing Users here, iterating through users with map,  transforming each user into a <li></li> and add u as the key */}
+                {users.map((user) => <li>User:   {user.name}, Email: {user.email}</li>)}
+                
               </ul>
 
               <div>
@@ -37,7 +43,6 @@ const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
                 </form>
               </div>
             </section>
-
    </>
   );
 };
