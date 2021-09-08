@@ -3,6 +3,7 @@ import calendarImg from "./calendar.png";
 import "./App.css";
 import Footer from "./components/Footer";
 import Users from "./components/Users";
+import DeleteUser from "./components/DeleteUser";
 
 //what is repeated that can be turned to reusable components: forms with input type as text, ul with list elements, submit button, fieldset  with label and input
 function App() {
