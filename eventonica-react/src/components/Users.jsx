@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import DeleteUser from './DeleteUser'
 
 const Users = () => {
     //adding mock users 
@@ -24,6 +25,22 @@ const Users = () => {
             const newUser = { name, email, id };
             setUsers([...users, newUser, id]);
     };
+
+    //function for when user is deleted, we want the user object with that ID to be removed from the users list, filter creates a new array with all elements that pass the test implemented by the provided function.
+    //creating new variable of deleteUsers and setting variable to deleteId
+    const deleteUser = (deleteId) => {
+        //declaring new variable newUsers, creating a new list and checks if the userid does not equal to deleteid, it will keep users in the list. If userid does equal delteId, we will not keep it in the list. 
+        function test (user){
+            if(user.id !== deleteId){
+                return true;
+            } else{
+                return false;
+            }
+        }
+        const newUsers = users.filter(test);
+        //setting state to newUsers, old list of users will be replaced by new list of users
+        setUsers(newUsers)
+    };
   
   return (
    <>
@@ -32,7 +49,7 @@ const Users = () => {
 
               <ul id="users-list">
                 {/* display all existing Users here, iterating through users with map,  transforming each user into a <li></li> and add u as the key */}
-                {users.map((user, id) => <li key={id}>User:   {user.name}, Email: {user.email}</li>)}
+                {users.map((user, i) => <li key={i}>User:   {user.name}, Email: {user.email}, User ID: {user.id}</li>)}
                 
               </ul>
 
@@ -63,18 +80,10 @@ const Users = () => {
                   {/* reset button not working
                   <button onClick="document.getElementById('addUser').value='Add'">Reset</button> */}
                 </form>
+                <DeleteUser deleteUser={deleteUser} />
               </div>
 
-              <div>
-                <h3>Delete User</h3>
-                <form id="delete-user" action="#">
-                  <fieldset>
-                    <label>User ID</label>
-                    <input type="text" id="delete-user-id" />
-                  </fieldset>
-                  <input type="submit" />
-                </form>
-              </div>
+              
             </section>
    </>
   );
