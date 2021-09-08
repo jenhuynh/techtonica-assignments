@@ -29,7 +29,7 @@ const Events = () => {
       const [events, setEvents] = useState([event1, event2, event3]);
 
       //use setstate to id field
-      const [eventId, setEventId] = useState("");
+      const [id, setId] = useState("");
     
       //use setstate to name field
       const [name, setName] = useState("");
@@ -46,8 +46,10 @@ const Events = () => {
     //add onsubmit function for form
     const onSubmit = (e) => {
         e.preventDefault(); 
-        const newEvent = {eventId, name, date, description, category};
-        setEvents([...events, newEvent, eventId]);
+        const newEvent = {id, name, date, description, category};
+        const newEventList = [...events, newEvent ];
+        debugger;
+        setEvents(newEventList);
     }
     return (
         <>
@@ -71,9 +73,9 @@ const Events = () => {
             <input
                 type="text"
                 id="add-event-id"
-                value={eventId}
+                value={id}
                 placeholder="Add event id"
-                onChange={(e) => setEventId(e.target.value)}
+                onChange={(e) => setId(e.target.value)}
               />
               </div>
               
