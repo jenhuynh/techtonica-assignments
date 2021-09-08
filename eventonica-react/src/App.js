@@ -4,7 +4,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Users from "./components/Users";
 import DeleteUser from "./components/DeleteUser";
-
+import Events from "./components/Events";
 //what is repeated that can be turned to reusable components: forms with input type as text, ul with list elements, submit button, fieldset  with label and input
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <main>
           <div className="user-and-events"></div>
           <Users />
+          <Events />
           <div>
             <h3>Delete Event</h3>
             <form id="delete-event" action="#">
