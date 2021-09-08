@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import DeleteUser from './DeleteUser'
-
+import Events from './Events';
 const Users = () => {
     //adding mock users 
     const marlin = { name: "Marlin", email: "marlin@gmail.com", id:"1" };
@@ -81,8 +81,9 @@ const Users = () => {
                   <button onClick="document.getElementById('addUser').value='Add'">Reset</button> */}
                 </form>
                 <DeleteUser deleteUser={deleteUser} />
+                
               </div>
-
+             
               
             </section>
    </>
