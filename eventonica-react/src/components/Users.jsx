@@ -23,7 +23,7 @@ const Users = () => {
     const onSubmit = (event) => {
         event.preventDefault(); // Prevent default submission so that it stops it from refreshing and sending data
             const newUser = { name, email, id };
-            setUsers([...users, newUser, id]);
+            setUsers([...users, newUser]);
     };
 
     //function for when user is deleted, we want the user object with that ID to be removed from the users list, filter creates a new array with all elements that pass the test implemented by the provided function.
