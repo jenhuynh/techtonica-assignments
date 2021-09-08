@@ -141,6 +141,7 @@ const Events = () => {
                 {/* event name field */}
                 <div> 
               <label>Name</label>
+              {/* when input is changed, it will dispatch the "editName" action */}
               <input
                 type="text"
                 name="name"
@@ -150,6 +151,7 @@ const Events = () => {
                 onChange={(e) =>
                     dispatch({
                     type: "editName",
+                // The payload of this action aka the data will be the input field value. The reducer will "read" this action and know to update state.name
                     payload: e.target.value
                     })
                   }
