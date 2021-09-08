@@ -1,10 +1,12 @@
 //React does not import images the same way as HTML because Babel converts the code into regular HTML and CSS for the browser to use, the path ends up being different
+import React, { useReducer } from "react";
 import calendarImg from "./calendar.png";
 import "./App.css";
 import Footer from "./components/Footer";
 import Users from "./components/Users";
 import DeleteUser from "./components/DeleteUser";
 import Events from "./components/Events";
+
 //what is repeated that can be turned to reusable components: forms with input type as text, ul with list elements, submit button, fieldset  with label and input
 function App() {
   return (
