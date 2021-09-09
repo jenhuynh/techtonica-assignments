@@ -19,4 +19,17 @@ router.post("/", function (req, res) {
   res.json(newUser);
 });
 
+// Delete a User
+router.delete("/", function (req, res) {
+  const id = req.params.id;
+  console.log();
+  // remove item by id
+  // you are automatically updating users w/ filter
+  users = users.filter((user) => {
+    // only return things that don't have the id
+    user.id !== id;
+  });
+  res.json(user);
+});
+
 module.exports = router;
