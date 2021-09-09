@@ -7,7 +7,7 @@ const Users = () => {
   console.log("apiResponse", apiResponse);
 
   const getUsers = () => {
-    fetch("http://localhost:3000/users")
+    fetch("/users")
       //turn my response into a JSON
       .then((res) => res.json())
       //set default for apiresponse to be an empty array
@@ -15,7 +15,7 @@ const Users = () => {
   };
 
   const addUser = (newUser) => {
-    fetch("http://localhost:3000/users", {
+    fetch("/users", {
       /*Add user on server side */
       method: "POST",
       headers: { "Content-Type": "application/json" },
