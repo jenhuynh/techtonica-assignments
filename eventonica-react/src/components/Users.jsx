@@ -8,22 +8,24 @@ const Users = () => {
 
   const getUsers = () => {
     fetch("http://localhost:3000/users")
-      .then(res => res.text())
+      .then((res) => res.text())
+      //parse text response into JSON
       .then((res) => JSON.parse(res))
-      .then(res => setApiResponse(res))
+      //set default for apiresponse to be an empty array
+      .then((res) => setApiResponse(res))
   };
 
   useEffect(() => {
-    getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered.
-  });
+    getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered. Empty array added witll stop inifinite runs
+  }, []);
 
     //adding mock users 
-    const marlin = { name: "Marlin", email: "marlin@gmail.com", id:"1" };
-    const nemo = { name: "Nemo", email: "nemo@gmail.com", id: "2" };
-    const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
+    // const marlin = { name: "Marlin", email: "marlin@gmail.com", id:"1" };
+    // const nemo = { name: "Nemo", email: "nemo@gmail.com", id: "2" };
+    // const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
 
     //use setState to create uers and setUsers
-    const [users, setUsers] = useState([marlin, nemo, dory])
+    const [users, setUsers] = useState([])
 
     //use setstate to name field
     const [name, setName] = useState("");
@@ -63,10 +65,17 @@ const Users = () => {
               <h2>User Management</h2>
 
               <ul id="users-list">
-              {apiResponse}
+        
                 {/* display all existing Users here, iterating through users with map,  transforming each user into a <li></li> and add u as the key */}
-                {users.map((user, i) => <li key={i}>User:   {user.name}, Email: {user.email}, User ID: {user.id}</li>)}
-                
+                {apiResponse.map((users, i) => {
+                return (
+                <li key={i}>
+                  User:   {users.name},
+                  Email: {users.email},
+                  User ID: {users.id}</li>);
+                })}
+                {/* {users.map((user, i) => <li key={i}>User:   {user.name}, Email: {user.email}, User ID: {user.id}</li>)}
+                 */}
               </ul>
 
               <div>
