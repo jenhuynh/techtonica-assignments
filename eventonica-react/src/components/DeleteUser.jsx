@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Users from "./Users";
 
 function DeleteUser({ deleteUser }) {
     //add state to store what deleteID the user has typed and change delete user
