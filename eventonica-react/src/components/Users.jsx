@@ -2,13 +2,14 @@ import React, {useEffect, useState} from 'react';
 import DeleteUser from './DeleteUser'
 import Events from './Events';
 const Users = () => {
-  const [apiResponse, setApiResponse] = useState("");
+  const [apiResponse, setApiResponse] = useState([]);
 
   console.log("apiResponse", apiResponse)
 
   const getUsers = () => {
     fetch("http://localhost:3000/users")
       .then(res => res.text())
+      .then((res) => JSON.parse(res))
       .then(res => setApiResponse(res))
   };
 
@@ -62,6 +63,7 @@ const Users = () => {
               <h2>User Management</h2>
 
               <ul id="users-list">
+              {apiResponse}
                 {/* display all existing Users here, iterating through users with map,  transforming each user into a <li></li> and add u as the key */}
                 {users.map((user, i) => <li key={i}>User:   {user.name}, Email: {user.email}, User ID: {user.id}</li>)}
                 
