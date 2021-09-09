@@ -8,14 +8,22 @@ const Users = () => {
 
   const getUsers = () => {
     fetch("http://localhost:3000/users")
-      .then((res) => res.text())
-      //parse text response into JSON
-      .then((res) => JSON.parse(res))
+    //turn my response into a JSON
+      .then((res) => res.json())
       //set default for apiresponse to be an empty array
       .then((res) => setApiResponse(res))
-  };
+   };
 
-  useEffect(() => {
+  const addUser = (newUser) => {
+    fetch("http://localhost:3000/users", { 
+       /*Add user on server side */
+       method: 'POST',
+       headers: {'Content-Type': 'application/json' }, 
+       body: JSON.stringify(newUser),
+      })
+      .then (getUsers)     
+      } 
+    useEffect(() => {
     getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered. Empty array added witll stop inifinite runs
   }, []);
 
@@ -40,9 +48,11 @@ const Users = () => {
     const onSubmit = (event) => {
         event.preventDefault(); // Prevent default submission so that it stops it from refreshing and sending data
             const newUser = { name, email, id };
-            setUsers([...users, newUser]);
+            addUser(newUser);
     };
+    //call getUsers after the onSubmit
 
+    console.log(users);
     //function for when user is deleted, we want the user object with that ID to be removed from the users list, filter creates a new array with all elements that pass the test implemented by the provided function.
     //creating new variable of deleteUsers and setting variable to deleteId
     const deleteUser = (deleteId) => {
