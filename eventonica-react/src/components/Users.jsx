@@ -1,7 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import DeleteUser from './DeleteUser'
 import Events from './Events';
 const Users = () => {
+  const [apiResponse, setApiResponse] = useState("");
+
+  console.log("apiResponse", apiResponse)
+
+  const getUsers = () => {
+    fetch("http://localhost:3000/users")
+      .then(res => res.text())
+      .then(res => setApiResponse(res))
+  };
+
+  useEffect(() => {
+    getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered.
+  });
+
     //adding mock users 
     const marlin = { name: "Marlin", email: "marlin@gmail.com", id:"1" };
     const nemo = { name: "Nemo", email: "nemo@gmail.com", id: "2" };
