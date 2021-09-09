@@ -3,15 +3,16 @@ import Users  from "./Users";
 
 function DeleteUser ({deleteUser}) {
     //add state to store what deleteID the user has typed and change delete user
-    const [deleteId, setDeleteId] = useState("");
+    const [deleteId, setDeleteId] = useState(0);
 
   
     //add obSubmit function
     const onSubmit = (event) => {
         event.preventDefault(); 
         //callback function to delete user ids
+        console.log(deleteUser);
         deleteUser(deleteId);
-        setDeleteId("");
+        setDeleteId(0);
     }
     return(
         <>
@@ -20,7 +21,7 @@ function DeleteUser ({deleteUser}) {
         <form id="delete-user" action="#" onSubmit={onSubmit}>
             <fieldset>
             <label>User ID</label>
-            <input type="text" 
+            <input type="number" 
             id="delete-user-id" 
             value={deleteId} 
             onChange={(e) => setDeleteId(e.target.value)}/>
