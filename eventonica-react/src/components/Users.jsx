@@ -1,38 +1,34 @@
 import React, {useEffect, useState} from 'react';
 import DeleteUser from './DeleteUser'
-import Events from './Events';
+// import Events from './Events';
 const Users = () => {
+   //set default for apiresponse to be an empty array
   const [apiResponse, setApiResponse] = useState([]);
 
-  console.log("apiResponse", apiResponse)
+  // console.log("apiResponse", apiResponse)
 
   const getUsers = () => {
-    fetch("http://localhost:3000/users")
+    fetch("/users")
     //turn my response into a JSON
       .then((res) => res.json())
-      //set default for apiresponse to be an empty array
-      .then((res) => setApiResponse(res))
+      .then((res) => setApiResponse(res));
    };
 
   const addUser = (newUser) => {
-    fetch("http://localhost:3000/users/add", { 
+    fetch("/users", { 
        /*Add user on server side */
        method: 'POST',
        headers: {'Content-Type': 'application/json' }, 
        body: JSON.stringify(newUser),
-      })
-      .then (() => getUsers())     
+      }).then (getUsers);     
       } 
   
-      const deleteUser = (deleteId) => {
-        fetch(`http://localhost:3000/users/delete/${deleteId}`, { 
+      const deleteUser = (userId) => {
+        fetch(`/users/${userId}`, { 
            /*Add user on server side */
-           mode: 'no-cors',
-           method: 'POST',
-           headers: {'Content-Type': 'application/json' }, 
-          })
-          .then (() => getUsers())     
-          } 
+           method: 'DELETE',
+          }) .then (() => getUsers())     
+          }; 
     useEffect(() => {
     getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered. Empty array added witll stop inifinite runs
   }, []);
@@ -43,7 +39,7 @@ const Users = () => {
     // const dory = { name: "Dory", email: "dory@gmail.com" , id: "3"};
 
     //use setState to create uers and setUsers
-    const [users, setUsers] = useState([])
+    // const [users, setUsers] = useState([])
 
     //use setstate to name field
     const [name, setName] = useState("");
@@ -92,7 +88,8 @@ const Users = () => {
                 <li key={i}>
                   User:   {users.name},
                   Email: {users.email},
-                  User ID: {users.id}</li>);
+                  User ID: {users.id}</li>
+                  );
                 })}
                 {/* {users.map((user, i) => <li key={i}>User:   {user.name}, Email: {user.email}, User ID: {user.id}</li>)}
                  */}
@@ -106,30 +103,36 @@ const Users = () => {
                   <div>
                     <label>Name</label>
                     {/* with value property, every time the user ty[es a name in name field, the name state is updated */}
-                    <input type="text" id="add-user-name"
+                    <input type="text" 
+                    id="add-user-name"
                     value={name} 
-                    onChange={(e) => setName(e.target.value)}/>
+                    onChange={(e) => setName(e.target.value)}
+                    />
                     </div>
                     {/* email field */}
-                    <div><label>Email</label>
-                    <input type="email" id="add-user-email"
-                    value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <div>
+                    <label>Email</label>
+                    <input 
+                      type="email" 
+                      id="add-user-email"
+                      value={email} 
+                      onChange={(e) => setEmail(e.target.value)}/>
                     </div>
                     {/* id field */}
-                    <div><label>User ID</label>
-                    <input type="number" id="add-user-id"
-                    value={id} onChange={(e) => setId(e.target.value)}/>
+                    <div>
+                    <label>User ID</label>
+                    <input type="number" 
+                    id="add-user-id"
+                    value={id} 
+                    onChange={(e) => setId(Number(e.target.value))}/>
                     </div>
                   </fieldset>
                   <input type="submit" value="Add" id="addUser"/>
                   {/* reset button not working
                   <button onClick="document.getElementById('addUser').value='Add'">Reset</button> */}
                 </form>
-                <DeleteUser {...{deleteUser}} />
-                
+                <DeleteUser deleteUser={deleteUser} />
               </div>
-             
-              
             </section>
    </>
   );
