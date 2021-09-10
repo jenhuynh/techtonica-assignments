@@ -4,7 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 //require CORS
-var cors = require("cors");
+// var cors = require("cors");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 //add events route
@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 //have express use CORS
-app.use(cors());
+// app.use(cors());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 //add events route
