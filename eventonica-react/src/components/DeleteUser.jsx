@@ -13,7 +13,6 @@ function DeleteUser ({ deleteUser }) {
         setDeleteId(0);
     };
     return(
-        <>
         <div>
                 <h3>Delete User</h3>
                 <form id="delete-user" action="#" onSubmit={onSubmit}>
@@ -29,7 +28,6 @@ function DeleteUser ({ deleteUser }) {
                     <input type="submit" value="Delete" />
                 </form>
             </div>
-        </>
     );
 }
 
