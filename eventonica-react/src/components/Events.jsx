@@ -103,7 +103,7 @@ const Events = () => {
       }
  
     return (
-        <>
+        <div>
         <section className="event-management">
         <h2>Event Management</h2>
         
@@ -127,7 +127,7 @@ const Events = () => {
                 name="id"
                 id="add-event-id"
                 value={state.id}
-                placeholder="Add event id"
+                placeholder="Event Id"
                 onChange={(e) =>
                     dispatch({
                     type: "editId",
@@ -147,7 +147,7 @@ const Events = () => {
                 name="name"
                 id="add-event-name"
                 value={state.name}
-                placeholder="Add event name"
+                placeholder="Event Name"
                 onChange={(e) =>
                     dispatch({
                     type: "editName",
@@ -166,7 +166,7 @@ const Events = () => {
                 name="date"
                 id="add-event-date"
                 value={state.date}
-                placeholder="Add event date"
+                placeholder="Event Date"
                 onChange={(e) =>
                     dispatch({
                     type: "editDate",
@@ -184,7 +184,7 @@ const Events = () => {
                 name="description"
                 id="add-event-description"
                 value={state.description}
-                placeholder="Add event description"
+                placeholder="Event Decription"
                 onChange={(e) =>
                     dispatch({
                     type: "editDescription",
@@ -202,7 +202,7 @@ const Events = () => {
                 name="category"
                 id="add-event-category"
                 value={state.category}
-                placeholder="Add event category"
+                placeholder="Event Category"
                 onChange={(e) =>
                     dispatch({
                     type: "editCategory",
@@ -218,7 +218,7 @@ const Events = () => {
         </div>
       </section>
 
-    </>
+    </div>
   )
 }
 
