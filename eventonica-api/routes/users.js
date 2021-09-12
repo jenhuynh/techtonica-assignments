@@ -47,7 +47,7 @@ router.post("/", function (req, res) {
 // Delete a User
 router.delete("/:userId", function (req, res) {
   const id = Number(req.params.userId);
-
+  //deletes specific id from users database
   db.result("DELETE FROM users WHERE id = $1", [id])
     .then((result) => {
       // remove item by id
