@@ -76,7 +76,7 @@ const Users = () => {
     // };
   
   return (
-   <>
+   <div>
      <section className="user-management">
               <h2>User Management</h2>
 
@@ -106,6 +106,7 @@ const Users = () => {
                     <input type="text" 
                     id="add-user-name"
                     value={name} 
+                    placeholder="Enter Name"
                     onChange={(e) => setName(e.target.value)}
                     />
                     </div>
@@ -115,6 +116,7 @@ const Users = () => {
                     <input 
                       type="email" 
                       id="add-user-email"
+                      placeholder="Enter Email"
                       value={email} 
                       onChange={(e) => setEmail(e.target.value)}/>
                     </div>
@@ -124,6 +126,7 @@ const Users = () => {
                     <input type="number" 
                     id="add-user-id"
                     value={id} 
+                    placeholder="Enter User Id"
                     onChange={(e) => setId(Number(e.target.value))}/>
                     </div>
                   </fieldset>
@@ -134,7 +137,7 @@ const Users = () => {
                 <DeleteUser deleteUser={deleteUser} />
               </div>
             </section>
-   </>
+   </div>
   );
 };
 
