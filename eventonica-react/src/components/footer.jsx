@@ -1,7 +1,7 @@
-
+import React from "react"
 function Footer () {
     return (
-        <>
+        <div>
         <footer>
         <div>
         Star Calendar favicon made by
@@ -14,7 +14,7 @@ function Footer () {
         </a>
         </div>
         </footer>
-        </>
+        </div>
     );
 }
  
