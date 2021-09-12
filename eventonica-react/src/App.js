@@ -10,53 +10,46 @@ import calendarImg from "./calendar.png";
 //what is repeated that can be turned to reusable components: forms with input type as text, ul with list elements, submit button, fieldset  with label and input
 function App() {
   return (
-    <>
-      <div className="App">
-        <header>
-          <img src={calendarImg} alt="Calendar Star Logo" />
-          <h1>Eventonica</h1>
-        </header>
+    <div className="App">
+      <header>
+        <img src={calendarImg} alt="Calendar Star Logo" />
+        <h1>Eventonica</h1>
+      </header>
+      <main>
+        <div className="user-and-events"></div>
+        <Users />
+        <Events />
+        <div>
+          <h3>Delete Event</h3>
+          <form id="delete-event" action="#">
+            <fieldset>
+              <label>Event ID</label>
+              <input type="number" min="1" id="delete-event-id" />
+            </fieldset>
+            <input type="submit" />
+          </form>
+        </div>
 
-        <main>
-          <div className="user-and-events"></div>
-          <Users />
-          <Events />
+        <aside className="search-toolbar">
           <div>
-            <h3>Delete Event</h3>
-            <form id="delete-event" action="#">
+            <h3>Find Events</h3>
+            <form id="search" action="#">
               <fieldset>
-                <label>Event ID</label>
-                <input type="number" min="1" id="delete-event-id" />
+                <label htmlFor="date-search">Date</label>
+                <input type="text" id="date-search" placeholder="YYYY-MM-DD" />
               </fieldset>
-              <input type="submit" />
+              <fieldset>
+                <label htmlFor="category-search">Category</label>
+                <input type="text" id="category-search" />
+              </fieldset>
+
+              <input type="submit" value="Search" />
             </form>
           </div>
-
-          <aside className="search-toolbar">
-            <div>
-              <h3>Find Events</h3>
-              <form id="search" action="#">
-                <fieldset>
-                  <label htmlFor="date-search">Date</label>
-                  <input
-                    type="text"
-                    id="date-search"
-                    placeholder="YYYY-MM-DD"
-                  />
-                </fieldset>
-                <fieldset>
-                  <label htmlFor="category-search">Category</label>
-                  <input type="text" id="category-search" />
-                </fieldset>
-
-                <input type="submit" value="Search" />
-              </form>
-            </div>
-          </aside>
-        </main>
-        <footer>{Footer}</footer>
-      </div>
-    </>
+        </aside>
+      </main>
+      <footer>{Footer}</footer>
+    </div>
   );
 }
 
