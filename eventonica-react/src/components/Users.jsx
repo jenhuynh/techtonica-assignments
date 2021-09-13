@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import DeleteUser from './DeleteUser'
+import DeleteUser from './DeleteUser';
+import DeleteEvent from './DeleteEvent';
 // import Events from './Events';
 const Users = () => {
    //set default for apiresponse to be an empty array
@@ -14,7 +15,14 @@ const Users = () => {
       .then((res) => setApiResponse(res));
    };
 
-  const addUser = (newUser) => {
+   const getEvents = () => {
+    fetch("/events")
+    //turn my response into a JSON
+      .then((res) => res.json())
+      .then((res) => setApiResponse(res));
+   };
+
+   const addUser = (newUser) => {
     fetch("/users", { 
        /*Add user on server side */
        method: 'POST',
@@ -29,6 +37,13 @@ const Users = () => {
            method: 'DELETE',
           }) .then (() => getUsers())     
           }; 
+
+          const deleteEvent = (eventId) => {
+            fetch(`/events/${eventId}`, { 
+               /*Add user on server side */
+               method: 'DELETE',
+              }) .then (() => getUsers())     
+              }; 
     useEffect(() => {
     getUsers(); // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered. Empty array added witll stop inifinite runs
   }, []);
@@ -134,7 +149,12 @@ const Users = () => {
                   {/* reset button not working
                   <button onClick="document.getElementById('addUser').value='Add'">Reset</button> */}
                 </form>
+                <div>
                 <DeleteUser deleteUser={deleteUser} />
+                </div>
+                <div>
+                {/* <DeleteEvent deleteEvent={deleteEvent}/> */}
+                </div>
               </div>
             </section>
    </div>
