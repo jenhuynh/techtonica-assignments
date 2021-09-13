@@ -28,6 +28,7 @@ router.get("/", function (req, res, next) {
     });
 });
 
+//adds a user
 router.post("/", function (req, res) {
   const newUser = req.body;
   db.none("INSERT INTO users(name, email) VALUES($1, $2)", [
