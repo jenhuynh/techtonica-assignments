@@ -1,4 +1,5 @@
 import React, {useReducer, useState} from 'react';
+// import SearchEvents from "./SearchEvent";
 
   //initial state for the form reducer which is an object with keys for each field in the form, values will be updated as the user fills out the form
   const initialState = {
@@ -77,7 +78,7 @@ const Events = () => {
     // const EventForm = () => {
          //creating events state to initilize with mock events
       const [events, setEvents] =  useState([event1, event2, event3]  );
-    //   const [events, setEvents] =  useState([event1, event2, event3]);
+    
       //reducers will store and update the form data
         const [state, dispatch] = useReducer(reducer, initialState);
           //add onsubmit function for form
@@ -217,7 +218,9 @@ const Events = () => {
           </form>
         </div>
       </section>
-
+      {/* <aside className="search-toolbar">
+          <SearchEvents events={events} setEvents={setEvents} />
+        </aside> */}
     </div>
   )
 }
