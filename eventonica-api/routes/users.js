@@ -1,10 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var pgp = require("pg-promise")(/* options */);
-//creating connection to database
-//connection string which describes how to connect to the database
-var db = pgp("postgres://eventonica:1234@localhost/eventonica");
-
+var { db } = require("./database.js");
 //mock users
 let users = [
   // { name: "Jair", email: "jair@gmail.com", id: 1 },

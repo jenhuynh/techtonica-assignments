@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Events from "./Events";
- 
-function DeleteEvent ({events, setEvents}){
+// import Events from "./Events";
+function DeleteEvent({ events, setEvents}){
     //add state to delete event changes
-    const [deleteEventId, setDeleteEventId] = useState('');
+  const [deleteEventId, setDeleteEventId] = useState('');
 
-    //onsubmit for deleteevent
+    // onsubmit for deleteevent
     const deleteEvent = (e) => {
       e.preventDefault();
       // look through events with deleteEventId state 
@@ -28,7 +27,7 @@ function DeleteEvent ({events, setEvents}){
             <input type="submit" value="Delete Event" onClick={(e) => deleteEvent(e)}/>
           </form>
         </div>
-    )
+    );
 }
 
 export default DeleteEvent;

@@ -15,7 +15,8 @@
     "start": "PORT=8888 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint *.json"
   },
   "proxy": "http://localhost:3000",
   "eslintConfig": {
@@ -37,6 +38,12 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.14.5"
+    "@babel/preset-react": "^7.14.5",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

@@ -33,7 +33,7 @@ const Forecast = () => {
     // fetching weather app data, url is a template string so we can use our variables with useState and able to access global weather data
     // api for search one city `https://community-open-weather-map.p.rapidapi.com/weather?units=${unit}&q=${uriEncodedCity}`
     fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&cnt=33&appid=2a0d2423a6b833f34886eef2eb9b0175`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${uriEncodedCity}&units=${unit}&cnt=33&appid=${process.env.REACT_APP_OPENWEATHERMAP_API_KEY}`
     )
       //converting the response into a JSON object, .then function is what happens after we get our data from the API, first waiting for response to see if it is 200
       .then((response) => {

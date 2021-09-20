@@ -1,6 +1,13 @@
 import React from "react";
 
 const WeatherCard = (props) => {
+  const toDate = (datestring) => {
+    const options = { weekday: "long", month: "long", day: "numeric" };
+    return new Date(datestring).toLocaleDateString("en", options);
+    //add locale date time string
+  };
+  // return new Date(datestring).toLocaleDateString("en", options);
+
   return (
     <div>
       {props.responseObj.cod === "200" ? (
@@ -10,7 +17,7 @@ const WeatherCard = (props) => {
           </p>
           <p>
             {/* // getting date */}
-            {props.responseObj.list[props.index].dt_txt}
+            {toDate(props.responseObj.list[props.index].dt_txt)}
           </p>
           <p>
             {/* // temp of day */}
